@@ -1,0 +1,121 @@
+body {
+   
+    margin: 0;
+    padding: 20px;
+    background-color: #470423;
+    background-image: url(quiz.jpeg)no-repeat; 
+    
+}
+
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 3px 3px 3px 3px rgb(35, 1, 12);
+    margin-top: 60px;
+
+}
+
+.options {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+.option {
+   
+     margin: 10px 0;
+    /* padding: 10px 20px; You can adjust the padding to make buttons wider */
+    border: 2px solid black#ddd;
+    border-radius: 5px;
+    background-color: #b7bc12;
+    cursor: pointer;
+    width: 40%; 
+    max-width: 490px; 
+    /* text-align: center; */
+}
+
+.option.correct {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.option.wrong {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color:black;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.correct {
+    color: green;
+}
+
+.wrong {
+    color: red;
+}
+
+#review-list {
+    margin-top: 20px;
+}
+
+#review-list li {
+    /* text-align: center; */
+    margin-bottom: 15px;
+    list-style: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+
+/* Styles for the balloon animation */
+.balloons::before,
+.balloons::after {
+    content: '🎈';
+    position: absolute;
+    font-size: 2em;
+    animation: float 5s ease-in-out infinite;
+}
+
+.balloons::before {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.balloons::after {
+    right: 10%;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.result-button {
+    margin: 10px;
+} 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Interactive Quiz</h1>
+        <div id="quiz-info" style="display: none;">
+            <h3>Question: <span id="question-number">1</span>/5</h3>
+            <h3>Score: <span id="score">0</span></h3> 
+             <h3>Time left: <span id="time-left">30</span> seconds</h3>  
+        </div>
+        <div id="start-container">
+            <h3>Instructions</h3>
+            <ul>Without selecting an answer, users cannot proceed to the next question.</ul>
+            <ul>Once an answer is selected, it cannot be changed.</ul>
+            <ul>You have 30 seconds to complete the quiz. </ul>
+            <ul>Click the button below to start.</ul>
+            <button id="start-btn" onclick="startQuiz()">Start Quiz</button>
+        </div>
+       
+        <div id="question-container" style="display: none;">
+            <p id="question-text"></p>
+            <div class="options">
+                 Options will be dynamically inserted here 
+             </div>
+        </div>
+        <button id="next-btn" onclick="nextQuestion()" style="display: none;">Next</button>
+        <button id="submit-btn" onclick="finalSubmission()" style="display: none;">Final Submission</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html> 
